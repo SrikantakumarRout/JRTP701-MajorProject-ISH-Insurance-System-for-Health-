@@ -1,0 +1,25 @@
+# Conversion to YAML from Properties formar report
+# Warnings:
+# - The yaml file had comments which are lost in the refactoring!
+# - Multiple values [ssa-web:url:http://localhost:9090/ssa-web-api/find/{ssn}, state:california] assigned to 'ar'. Values are merged into a yaml sequence node.
+spring:
+  application:
+    name: JRTP701-MajorProj-ApplicationRegistrationService
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///jrtp701-majorproj-ish-db
+    username: root
+    password: srikanta
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 7071
+
+  
+ar:
+  ssa-web:
+    url: http://localhost:9090/ssa-web-api/find/{ssn}
+  state: California
