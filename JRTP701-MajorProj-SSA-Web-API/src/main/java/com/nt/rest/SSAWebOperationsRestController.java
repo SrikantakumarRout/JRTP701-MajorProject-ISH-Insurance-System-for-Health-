@@ -14,7 +14,7 @@ public class SSAWebOperationsRestController {
 	@GetMapping("/find/{ssn}")
 	public ResponseEntity<String> getStateBySSN(@PathVariable Integer ssn){
 		
-		if(String.valueOf(ssn).length() !=9)
+		if(String.valueOf(ssn).length()!=9)
 			return new ResponseEntity<String>("invalid ssn",HttpStatus.BAD_REQUEST);
 		
 		//get state name
@@ -27,7 +27,7 @@ public class SSAWebOperationsRestController {
 		else if(stateCode==03)
 			stateName="Texas";
 		else if(stateCode==04)
-			stateName="Callifornia";
+			stateName="California";
 		else if(stateCode==05)
 			stateName="florida";
 		else
