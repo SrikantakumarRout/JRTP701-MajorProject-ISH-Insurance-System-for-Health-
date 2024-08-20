@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: JRTP701-MajorProj-DataCollectionService
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jrtp701-majorproj-ish-db
+    username: root
+    password: srikanta
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 7072
